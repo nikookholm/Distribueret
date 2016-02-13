@@ -11,6 +11,6 @@ public interface old_iServerFunctions extends Remote {
 	public Bruger login(String username, String password)
 			throws RemoteException;
 
-	public IGalgelogik accessGL() throws RemoteException;
+	//public IGalgelogik accessGL() throws RemoteException;
 
 }

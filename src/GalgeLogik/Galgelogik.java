@@ -3,7 +3,6 @@ package GalgeLogik;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,8 +10,7 @@ import java.util.HashSet;
 import java.util.Random;
 
 public class Galgelogik {
-
-private ArrayList<String> muligeOrd = new ArrayList<String>();
+  private ArrayList<String> muligeOrd = new ArrayList<String>();
   private String ordet;
   private ArrayList<String> brugteBogstaver = new ArrayList<String>();
   private String synligtOrd;
@@ -93,7 +91,7 @@ private ArrayList<String> muligeOrd = new ArrayList<String>();
 
   public void gætBogstav(String bogstav) {
     if (bogstav.length() != 1) return;
-    System.out.println("Der gÃ¦ttes pÃ¥ bogstavet: " + bogstav);
+    System.out.println("Der gættes på bogstavet: " + bogstav);
     if (brugteBogstaver.contains(bogstav)) return;
     if (spilletErVundet || spilletErTabt) return;
 
@@ -103,7 +101,7 @@ private ArrayList<String> muligeOrd = new ArrayList<String>();
       sidsteBogstavVarKorrekt = true;
       System.out.println("Bogstavet var korrekt: " + bogstav);
     } else {
-      // Vi gÃ¦ttede pÃ¥ et bogstav der ikke var i ordet.
+      // Vi gættede på et bogstav der ikke var i ordet.
       sidsteBogstavVarKorrekt = false;
       System.out.println("Bogstavet var IKKE korrekt: " + bogstav);
       antalForkerteBogstaver = antalForkerteBogstaver + 1;
@@ -141,7 +139,7 @@ private ArrayList<String> muligeOrd = new ArrayList<String>();
     String data = hentUrl("http://dr.dk");
     System.out.println("data = " + data);
 
-    data = data.replaceAll("<.+?>", " ").toLowerCase().replaceAll("[^a-zÃ¦Ã¸Ã¥]", " ");
+    data = data.replaceAll("<.+?>", " ").toLowerCase().replaceAll("[^a-zæøå]", " ");
     System.out.println("data = " + data);
     muligeOrd.clear();
     muligeOrd.addAll(new HashSet<String>(Arrays.asList(data.split(" "))));

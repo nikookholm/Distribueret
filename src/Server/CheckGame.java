@@ -5,7 +5,14 @@
  */
 package Server;
 
+import brugerautorisation.Diverse;
+import brugerautorisation.data.Bruger;
+import brugerautorisation.transport.soap.Brugeradmin;
 import com.cdyne.ws.DocumentSummary;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
 
 /**
  *
@@ -13,9 +20,17 @@ import com.cdyne.ws.DocumentSummary;
  */
 public class CheckGame {
     
-    public static void main(String[] agrs,java.lang.String bodyText ){
+    public static void main(String[] agrs,java.lang.String bodyText ) throws MalformedURLException{
         
-        checkTextBodyV2(bodyText);
+                checkTextBodyV2(bodyText);
+                
+                URL url = new URL("http://wsf.cdyne.com/SpellChecker/check.asmx?wsdl");
+		QName qname = new QName("http://soap.transport.brugerautorisation/", "BrugeradminImplService");
+		Service service = Service.create(url, qname);
+		CheckGameI test = service.getPort(CheckGameI.class);
+
+//		Bruger b = test.CheckTextBodyV2("bodyText");
+
                 
     }
 

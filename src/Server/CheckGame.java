@@ -9,6 +9,7 @@ import brugerautorisation.Diverse;
 import brugerautorisation.data.Bruger;
 import brugerautorisation.transport.soap.Brugeradmin;
 import com.cdyne.ws.DocumentSummary;
+import com.cdyne.ws.Words;
 import java.net.MalformedURLException;
 import java.net.URL;
 import javax.xml.namespace.QName;
@@ -20,9 +21,13 @@ import javax.xml.ws.Service;
  */
 public class CheckGame {
     
-    public static void main(String[] agrs,java.lang.String bodyText ) throws MalformedURLException{
+    public static void main(String[] agrs ) throws MalformedURLException{
         
-                checkTextBodyV2(bodyText);
+                DocumentSummary ds = checkTextBodyV2("Hillo der world");
+        for (Words w : ds.getMisspelledWord()) {
+            System.out.println("Forkert ord: "+w.getWord());
+            System.out.println("Forslag: "+w.getSuggestions());
+        }
                 
                 URL url = new URL("http://wsf.cdyne.com/SpellChecker/check.asmx?wsdl");
 		QName qname = new QName("http://soap.transport.brugerautorisation/", "ServerFunktion" );

@@ -25,11 +25,10 @@ public class CheckGame {
                 checkTextBodyV2(bodyText);
                 
                 URL url = new URL("http://wsf.cdyne.com/SpellChecker/check.asmx?wsdl");
-		QName qname = new QName("http://soap.transport.brugerautorisation/", "BrugeradminImplService");
+		QName qname = new QName("http://soap.transport.brugerautorisation/", "ServerFunktion" );
 		Service service = Service.create(url, qname);
-		CheckGameI test = service.getPort(CheckGameI.class);
-
-//		Bruger b = test.CheckTextBodyV2("bodyText");
+		iServerFunctions test = service.getPort(iServerFunctions.class);
+                
 
                 
     }

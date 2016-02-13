@@ -3,20 +3,20 @@ package Server;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-import GalgeLogik.Galgelogik;
+import GalgeLogik.IGalgelogik;
 import brugerautorisation.data.Bruger;
 import brugerautorisation.transport.rmi.Brugeradmin;
 
-public class ServerFunctions extends UnicastRemoteObject implements iServerFunctions {
+public class old_ServerFunctions extends UnicastRemoteObject implements iServerFunctions {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 3422323;
-	private transient Galgelogik  gl;
+	private transient IGalgelogik  gl;
 	private Brugeradmin ba;
 	
-	public ServerFunctions(Galgelogik gl, Brugeradmin ba) throws RemoteException
+	public old_ServerFunctions(IGalgelogik gl, Brugeradmin ba) throws RemoteException
 	{
 		this.gl = gl;
 		this.ba = ba;
@@ -36,7 +36,7 @@ public class ServerFunctions extends UnicastRemoteObject implements iServerFunct
 	}
 	
 
-	public Galgelogik accessGL() throws RemoteException
+	public IGalgelogik accessGL() throws RemoteException
 	{
 		return gl;
 		

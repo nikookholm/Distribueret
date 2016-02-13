@@ -3,14 +3,14 @@ package Server;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import GalgeLogik.Galgelogik;
+import GalgeLogik.IGalgelogik;
 import brugerautorisation.data.Bruger;
 
-public interface iServerFunctions extends Remote {
+public interface old_iServerFunctions extends Remote {
 
 	public Bruger login(String username, String password)
 			throws RemoteException;
 
-	public Galgelogik accessGL() throws RemoteException;
+	public IGalgelogik accessGL() throws RemoteException;
 
 }

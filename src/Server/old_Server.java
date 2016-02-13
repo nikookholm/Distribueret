@@ -7,10 +7,11 @@ import brugerautorisation.data.Bruger;
 import brugerautorisation.transport.rmi.*;
 
 
-public class Server {
+public class old_Server {
 	
 	private Brugeradmin ba;
 	private Galgelogik  gl;
+	//private SpellCheck 
 
 	public static void main(String[] args) {
 	
@@ -18,7 +19,7 @@ public class Server {
 		
 	}
 	
-	public Server()
+	public old_Server()
 	{
 		try {
 			Initialize();

@@ -21,7 +21,7 @@ public class TUI {
         // result[1] returnerer password;
         
       
-        System.out.println("indtest din navn: ");
+        System.out.println("indtest dit studienummer: ");
         String name = scn.nextLine();
         System.out.println("indtest dit password: ");
         String password = scn.nextLine();

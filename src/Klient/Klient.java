@@ -46,7 +46,7 @@ public class Klient {
          
        try {
            bruger =  isf.login(result[0], result[1]);
-           tui.print("du er login som: " + bruger.brugernavn);
+           tui.print("du er login som: " + bruger.fornavn + " " + bruger.efternavn);
        } catch (RemoteException ex) {
            
            tui.print(ex.getMessage());

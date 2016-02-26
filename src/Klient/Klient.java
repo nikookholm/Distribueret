@@ -2,15 +2,11 @@ package Klient;
 
 import Server.iServerFunctions;
 import brugerautorisation.data.Bruger;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.rmi.Naming;
-import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.xml.namespace.QName;
-import javax.xml.ws.Service;
+
 
 public class Klient {
     
@@ -28,7 +24,7 @@ public class Klient {
         
     }
     
-    public void main(String[] args){
+    public static void main(String[] args){
         
         new Klient();
         

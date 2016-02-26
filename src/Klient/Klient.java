@@ -63,11 +63,12 @@ public class Klient {
               
            
                try {
+            	   System.out.println(" er her !_>");
                     isf.nulstil();
                     
                    while(!isf.erSpilletSlut()){
                       
-                       String gætBokstav = tui.gætBokstav();
+                       String gætBokstav = tui.gætBokstav(isf.getSynligtOrd());
                        
                        isf.gætBogstav(gætBokstav);
 

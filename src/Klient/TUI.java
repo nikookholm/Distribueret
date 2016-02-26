@@ -39,7 +39,9 @@ public class TUI {
         System.out.println( text );
     }
     
-    public String gætBokstav(){
+    public String gætBokstav(String synligtOrd){
+    	
+    	print("get ordet: " + synligtOrd);
         
         print("indtest en bokstave du vil gæt: " );
  

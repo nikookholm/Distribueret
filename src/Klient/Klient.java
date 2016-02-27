@@ -63,7 +63,6 @@ public class Klient {
               
            
                try {
-            	   System.out.println(" er her !_>");
                     isf.nulstil();
                     
                    while(!isf.erSpilletSlut()){
